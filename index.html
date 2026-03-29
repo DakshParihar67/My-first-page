@@ -18,6 +18,45 @@
     50% { background-position: 100% 50%; }
     100% { background-position: 0% 50%; }
         }
+        .section {
+    padding: 80px;
+    text-align: center;
+}
+
+.section h2 {
+    font-size: 35px;
+    margin-bottom: 20px;
+}
+
+.section p, .section ul {
+    font-size: 18px;
+}
+
+.section ul {
+    list-style: none;
+}
+
+.footer {
+    padding: 20px;
+    background: black;
+    color: white;
+}
+nav {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    background: black;
+    padding: 10px;
+}
+
+nav a {
+    color: white;
+    margin: 15px;
+    text-decoration: none;
+}
+html {
+    scroll-behavior: smooth;
+}
 
         button{
             padding: 15px;
@@ -42,30 +81,41 @@ button:hover {
     </style>
 </head>
 <body>
+    <nav>
+    <a href="#main">Home</a>
+    <a href="#about">About</a>
+    <a href="#features">Features</a>
+</nav>
     <div id="main">
-        <h1 id="typing"></h1>
-        <p>wanna know how i did this</p>
+    <h1 id="typing"></h1>
+    <p>This is my first interactive website</p>
+    <button onclick="showMessage()">Click Me</button>
+</div>
 
-        <button onclick ="showMessage()">What's up!!</button>
-    </div>
-    <script>
-        let text = "Welcome to my First page 🚀";
-        let i = 0;
+<!-- ABOUT -->
+<div id="about" class="section">
+    <h2>About Me</h2>
+    <p>I’m learning frontend development and building cool stuff 😎</p>
+</div>
 
-        function typeffect(){
-            if(i<text.length){
-                document.getElementById("typing").innerHTML += text.charAt(i);
-                i++
-                setTimeout(typeffect,100);
-            }
-        }
+<!-- FEATURES -->
+<div id="features" class="section">
+    <h2>Features</h2>
+    <ul>
+        <li>🔥 Animated Background</li>
+        <li>⚡ Typing Effect</li>
+        <li>🎯 Interactive Button</li>
+    </ul>
+</div>
 
-        typeffect();
-
-        function showMessage()
-        {
-            alert("Is this TS tuff??😎")
-        }
-    </script>
+<!-- FOOTER -->
+<div class="footer">
+    <p>Made by Daksh 🚀</p>
+</div>
+<script>
+function showMessage() {
+    alert("You clicked the button 😎");
+}
+</script>
 </body>
 </html>
